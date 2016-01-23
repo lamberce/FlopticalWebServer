@@ -166,11 +166,13 @@ class ServeSite(object):
 		cnx = mysql.connector.connect(**config)
 		cursor = cnx.cursor()
 		args = [videoIdToDelete]
-	#	conn = boto.connect_s3(S3_ACCESS_KEY, S3_SECRET_KEY)
-	#	bucket = conn.get_bucket('floptical')
-	#	videoName = cursor.callproc('sp_get_video_name_by_id',[videoIdToDelete,''])[1]
-	#	key = 'videos/' + videoName
-	#	bucket.delete_key(key)
+		conn = boto.connect_s3(S3_ACCESS_KEY, S3_SECRET_KEY)
+		bucket = conn.get_bucket('floptical',validate=False)
+		videoLink = cursor.callproc('sp_get_video_link_by_id',[videoIdToDelete,''])[1]
+		videoName = videoLink.split("/")
+		videoName = videoName[len(videoName)-1]
+		key = 'videos/' + videoName
+		bucket.delete_key(key)
 		cursor.callproc('sp_delete_video_by_id',args)
 		cnx.commit()
 		cnx.close()
