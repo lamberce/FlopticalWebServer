@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	</head>
+	<body>
+		%s
+		<form enctype="multipart/form-data" action="saveFiles" method="post">
+			<p>Video File: <input type="file" name="uploadFile"></p>
+			<p>Video Name: <input type="text" name="vName"></p>
+			<p>Video Quality: <input type="text" name="vQuality"></p>
+			<p>Associated Username: <input type="text" name="username"></p>
+			<p><input type="submit" value="Upload"></p>
+		</form>
+		<table style="border: 1px solid black;">
+			<tr>
+				<td>Video Name</td>
+				<td>Video Duration</td>
+				<td>Video Quality</td>
+				<td>Upload Date</td>
+				<td>Associated Username</td>
+				<td></td>
+			</tr>
+			%s
+		</table>
+	</body>
+</html>

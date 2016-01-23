@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+                <meta name="description" content="">
+                <meta name="author" content="">
+                <link rel="icon" href="../../favicon.ico">
+
+                <title>Jumbotron Template for Bootstrap</title>
+
+                <!-- Bootstrap core CSS -->
+                <link rel="stylesheet" href="/static/cssFiles/bootstrap.min.css">
+
+                <!-- Custom styles for this template -->
+                <link href="/static/cssFiles/jumbotron.css" rel="stylesheet">
+        </head>
+        <body>
+                <!-- Main jumbotron for a primary marketing message or call to action -->
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="container">
+                                <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="#">Project name</a>
+                                </div>
+                                <div id="navbar" class="navbar-collapse collapse">
+                                        <form class="navbar-form navbar-right" action="signin" method = "post">
+                                                <div class="form-group">
+							<label style="color:red">%s</label>
+                                                        <input type="text" placeholder="Email" class="form-control" name = "signin_email" maxlength = 30 required>
+                                                </div>
+                                                <div class="form-group">
+                                                        <input type="password" placeholder="Password" class="form-control" name = "signin_password" maxlength = 30 required>
+                                                </div>
+                                                <button class="btn btn-success" type="submit">Sign in</button>
+                                        </form>
+                                </div><!--/.navbar-collapse -->
+                        </div>
+                </nav>
+
+                <div class="jumbotron">
+                        <div class="container">
+                                <form class="form-signin">
+                                        <h1>Need an Account?</h1>
+                                        <h3>Sign up for free</h3>
+                                </form>
+				<form class="form-signin" action="createUser" method = "post">
+                                	<div class=" form-inline">
+                                        	<div class="form-group">
+                                                	<label for="cu_fName" class="sr-only">First Name</label>
+                                                	<input type="text" id="cu_fName" name="cu_fName" class="form-control" placeholder="First Name" required autofocus>
+                                        	</div>
+                                        	<div class="form-group">
+                                                	<label for="cu_lName" class="sr-only">Last Name</label>
+                                                	<input type="text" id="cu_lName" name="cu_lName" class="form-control" placeholder="Last Name" required autofocus>
+                                        	</div>
+                                	</div>
+                                	<div class="form-signin">
+						 <div class="form-group">
+                                                	<label for="cu_sex" class="sr-only">Sex</label>
+                                                	<input type="text" name = "cu_sex" id="cu_sex" class="form-control" placeholder="M/F" required autofocus>
+                                        	</div>
+                                        	<div class="form-group">
+                                                	<label for="cu_email" class="sr-only">Email address</label>
+                                                	<input type="email" id="cu_email" name= "cu_email" class="form-control" placeholder="Email address" required autofocus>
+                                        	</div>
+                                        	<div class="form-group">
+                                                	<label for="cu_password" class="sr-only">Password</label>
+                                                	<input type="password" id = "cu_password" name ="cu_password" class="form-control" placeholder="Password" required>
+                                        	</div>
+					</div>
+                                	<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+                        	        
+				</form>
+                        </div> <!-- /container -->
+                </div>
+
+                <hr>
+                </div> <!-- /container -->
+
+
+                <!-- Bootstrap core JavaScript
+                ================================================== -->
+                <!-- Placed at the end of the document so the pages load faster -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+                <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+                <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+        </body>
+</html>
+
+
+
+

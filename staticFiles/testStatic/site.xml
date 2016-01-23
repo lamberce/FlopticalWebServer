@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/edu.rosehulman.chatapp_1.0.0.alpha.jar" id="edu.rosehulman.chatapp" version="1.0.0.alpha">
+      <category name="Rose-Hulman Multi-Cast Application"/>
+   </feature>
+   <category-def name="Rose-Hulman Multi-Cast Application" label="Rose-Hulman Multi-Cast Application">
+      <description>
+         Multi-cast plugin for Eclipse
+      </description>
+   </category-def>
+</site>
